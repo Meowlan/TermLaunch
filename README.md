@@ -1,3 +1,6 @@
+# ❗ [Deprecated on Win11]
+
+
 # Term Launch
 ### Small utility tool for easily launching a terminal
 
