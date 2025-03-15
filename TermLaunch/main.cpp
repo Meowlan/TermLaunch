@@ -226,7 +226,7 @@ void CreateTrayIcon(HWND hwnd) {
     nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
     nid.uCallbackMessage = WM_TRAYICON;
     nid.hIcon = LoadIcon(NULL, IDI_APPLICATION);
-    wcscpy_s(nid.szTip, L"Path Grabber");
+    wcscpy_s(nid.szTip, L"Term Launch");
 
     Shell_NotifyIcon(NIM_ADD, &nid);
 }
@@ -325,7 +325,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     // register the window class
-    const wchar_t CLASS_NAME[] = L"PathGrabberWindow";
+    const wchar_t CLASS_NAME[] = L"TermLaunchWindow";
 
     WNDCLASS wc = {};
     wc.lpfnWndProc = WindowProc;
@@ -338,7 +338,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     HWND hwnd = CreateWindowEx(
         0,                          // optional window styles
         CLASS_NAME,                 // window class
-        L"Path Grabber",            // window title
+        L"Term Launch",            // window title
         WS_OVERLAPPEDWINDOW,        // window style
 
         // size and position
@@ -365,7 +365,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
         return 1;
     }
 
-    std::cout << "Path Grabber is running!" << std::endl;
+    std::cout << "Term Launch is running!" << std::endl;
     std::cout << "Press Ctrl+Alt+T to get the path of the focused window." << std::endl;
     std::cout << "Press Ctrl+C in this console window to exit." << std::endl;
 
