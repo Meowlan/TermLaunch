@@ -13,3 +13,4 @@ the terminal will be launched within the opened folder.
 -  Config
 -  Run as a Service
 -  Integrations with other useful programs (VSCode)
+-  Fix Win11 File explorer tabs not being fully supported (Only the first openend tab works)
